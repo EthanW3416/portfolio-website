@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Signup</title>
+    <meta name="description" content="Sign up for the Electric Car Company newsletter. Stay updated on innovations, web development, UI/UX, and industry news.">
+    <meta name="author" content="Ethan Walsh">
+    <meta name="robots" content="noindex, follow">
+    <meta name="keywords" content="newsletter, signup, form, Ethan Walsh, electric car, email, updates, web development, UI/UX">
+    <link rel="stylesheet" href="/scripts/CSS/form.css">
+    <link rel="stylesheet" href="/scripts/CSS/Navbar-Header.css">
+    
+    <title>form-page</title>
+</head>
+<body onload="welcomeMessage()">
+
+    <div class="header-nav-container">
+        <header>
+            <img class="logo" src="/images/new-logo.png" alt="Logo">
+            <h1>FormPage</h1>
+        </header>
+
+        <nav>
+                <a href="index.html">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="about.html">About</a>
+                <a href="techstack.html">Techstack</a>
+                <div class="dropdown">
+                <a href="#" class="dropbtn">Skills ▼</a>
+                <div class="dropdown-content">
+                    <a href="javascriptpage.html">JavaScript Skills</a>
+                    <a href="skill-cybersecurity.html">Cyber Security</a>
+                    <a href="skill-communication.html">Communication</a>
+                    <a href="UI-UXdesign.html">UI/UX Design</a>
+                </div>
+            </div>
+            <a href="form-page.html" target="_blank" class="nav-button">Form-Page</a>
+        </nav>
+    </div>
+
+    <!-- Main content container for the form -->
+    <main class="form-container">
+        <!-- Form title -->
+        <h1>Newsletter Signup</h1>
+        <!-- Brief instructional text -->
+        <p>Please fill out the form below to subscribe.</p>
+
+        <!-- Form submission sends data to Formspree for handling -->
+        <!-- JavaScript validation is triggered before submission -->
+        <form action="https://formspree.io/f/xeokjenq" method="post" onsubmit="return validateForm();">
+
+            <!-- First name input field (required) -->
+            <label for="firstName">First Name <span class="required">*</span></label>
+            <input type="text" id="firstName" name="firstName" maxlength="60" required>
+
+            <!-- Last name input field (required) -->
+            <label for="lastName">Last Name <span class="required">*</span></label>
+            <input type="text" id="lastName" name="lastName" maxlength="60" required>
+
+            <!-- Email input field (required, validated via HTML5) -->
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" maxlength="60" required>
+
+            <!-- Age selection using radio buttons (only one can be selected, required) -->
+            <fieldset>
+                <legend>Age Range <span class="required">*</span></legend>
+                <label><input type="radio" name="age" value="15-25" required> 15–25</label>
+                <label><input type="radio" name="age" value="26-35"> 26–35</label>
+                <label><input type="radio" name="age" value="36-45"> 36–45</label>
+                <label><input type="radio" name="age" value="46-55"> 46–55</label>
+                <label><input type="radio" name="age" value="55+"> 55+</label>
+            </fieldset>
+
+            <!-- Multiple checkbox inputs to select areas of interest -->
+            <fieldset>
+                <legend>Different Company Sectors</legend>
+                <label><input type="checkbox" name="interest" value=" Manufactuering"> Manufactuering</label>
+                <label><input type="checkbox" name="interest" value=" Ui/UX Design"> Ui/UX Design</label>
+                <label><input type="checkbox" name="interest" value=" Software Engineer"> Software Engineer</label>
+                <label><input type="checkbox" name="interest" value=" Marketing"> Marketing</label>
+                <label><input type="checkbox" name="interest" value=" Engineer"> Engineer</label>
+            </fieldset>
+
+            <!-- Textarea for optional user comments -->
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" name="comments" cols="60" rows="3" placeholder="Let us know your interests..."></textarea>
+
+            <!-- Submit and Reset buttons for the form -->
+            <div class="buttons">
+                <input type="submit" value="Subscribe">
+                <input type="reset" value="Clear Form">
+            </div>
+        </form>
+    </main>
+
+    <script src="/scripts/form.js"></script>
+
+<footer class="footer-class">
+    <!-- Centered Copyright -->
+    <div class="footer-Information">
+        <p>&copy; 2025 Ethan Walsh. All content used with permission.</p>
+    </div>
+
+    <!-- Main Footer Grid -->
+    <div class="footer-content">
+        <!-- Left Side: Contact Info + Socials -->
+        <div class="footer-left">
+            <h3>Contact Information</h3>
+            <p>Phone: <a href="tel:+209202939301">0492929330201</a></p>
+            <p>Email: <a href="mailto:ethan72619@gmail.com">Ethan72619@gmail.com</a></p>
+
+            <h3>Social Media</h3>
+            <div class="soc-links">
+                <a href="https://www.linkedin.com/in/ethan-walsh-7693582b9/">
+                    <img src="/images/linkedin.png" class="social-icon" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="/images/instagram.png" class="social-icon" alt="Instagram">
+                </a>
+                <a href="https://github.com/EthanW3416">
+                    <img src="/images/github-mark-white.png" class="social-icon" alt="GitHub">
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Side: Navigation Links -->
+        <div class="footer-right">
+            <h3>Explore</h3>
+            <ul class="footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="techstack.html">TechStack</a></li>
+                <li><a href="form-page.html" target="_blank">Form Page</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
