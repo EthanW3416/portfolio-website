@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #373946;
+  margin: 0;
+}
+
+.form-container {
+  max-width: 700px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #008fc8fd;
+  text-align: center;
+}
+
+label, legend {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.required {
+  color: red;
+}
+
+.buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: #008fc8fd;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #00039e;
+}
+
+
+
+/* ==========================
+   Footer Styling
+   ========================== */
+
+.footer-class {
+    background-color: #1d1f29;
+    color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Centered copyright info */
+.footer-Information {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Flex container for contact/social and links */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Left section (Contact + Socials) */
+.footer-left {
+    flex: 1 1 45%;
+    padding: 10px;
+}
+
+.footer-left h3 {
+    margin-top: 0;
+}
+
+/* Right section (Links) */
+.footer-right {
+    flex: 1 1 45%;
+    padding: 10px;
+    text-align: right;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    margin: 6px 0;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #f8f8f8;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #00c896;
+}
+
+/* Social media icons */
+.soc-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.welcome-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00c896;
+  color: white;
+  padding: 15px;
+  font-size: 1.1rem;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  animation: dropFadeIn 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes dropFadeIn {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

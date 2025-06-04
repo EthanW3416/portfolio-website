@@ -1,0 +1,628 @@
+/* ==========================
+   Global Reset and Basic Styling
+   ========================== */
+
+/* Styling for highlighted text (including headings links and important text) */
+.highlighted {
+    color: #008fc8fd;
+    text-decoration: underline;
+    padding-right: 20px;
+  }
+/* Hover effect for highlighted text */
+  .highlighted:hover {
+    color: white;
+    transition: 0.5s; /* Adds smoother transitions */
+  }
+
+  /* Section for personal introduction on the About page */
+.name-about-me {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Heading styling within .name-about-me */
+.name-about-me h2 {
+    font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph styling for subtext in the About section */
+.name-about-me p {
+    font-size: 1.25rem;
+  color: #008fc8fd;
+}
+
+/* Special text color override, typically used to highlight text */
+.special-text {
+    color: rgb(255, 255, 255);
+}
+
+/* This is to remove any background changes that might occur or text changes */
+.special-text a:hover {
+    background: none;
+    color: white;
+}
+
+
+
+
+/* ==========================
+   Slideshow and Overlay Text
+   ========================== */
+
+/* Wraps the slideshow in a flexbox to center it horizontally */
+.slideshow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Container that holds the slideshow images and overlay text */
+.slideshow-container {
+    width: 100%; 
+    max-width: 100%;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Each individual slide (image) */
+.mySlides {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 0;
+}
+
+/* Style for the slide images */
+.mySlides img {
+    width: 100%;
+    height: 90vh;
+    display: block;
+    object-fit: cover; /* Maintain aspect ratio while filling */
+    border-radius: 10px; 
+}
+
+/* Active slide is made visible and on top */
+.mySlides.active {
+    display: block;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Text overlay on top of slideshow images */
+.text-overlay {
+  position: absolute;
+  bottom: 15%;
+  left: 35%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5); /*this will add a semi-transparent background to the text overlay*/
+  padding: 20px;
+  border-radius: 10px;
+  overflow: visible;
+  height: auto;  
+}
+
+/* Overlay heading style */
+.text-overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Overlay paragraph style */
+.text-overlay p {
+  font-size: 1.2rem;
+}
+
+/* ==========================
+   ShowCase
+   ========================== */
+
+.product-card {
+  flex: 0 0 60%; /* Smaller width than before */
+  max-width: 500px; /* Make them wider */
+  height: 300px;    /* Make them shorter */
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  scroll-snap-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: row; /* For side-by-side image and content */
+}
+
+.product-card img {
+  width: 100%; /* Adjust to take half of the card horizontally */
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Restructure product-info to align right of image */
+.product-info {
+  padding: 10px;
+  background: black;
+  color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* Category text */
+.category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+/* Skill header */
+.product-info h3 {
+  margin: 5px 0;
+  font-size: 1.25rem;
+}
+
+/* Skill summary information */
+.product-info p {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+/* Link to the skill page */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* sets the layout and styling of the learn more button along with the color transition */
+.learn-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 0.85rem;
+  background-color: #3a55ff;
+  color: white;
+}
+
+/* Hover effect for learn button */
+.learn-btn:hover {
+  background-color: #2539c9;
+}
+
+
+
+/* ==========================
+   Resume Section Styling
+   ========================== */
+
+.resume-summary {
+  text-align: center;
+}
+
+/* special link styling */
+.special-text a {
+    color: rgb(17, 199, 231); /* Bright blue to stand out against dark background */
+    text-decoration: underline; /* Makes links easily identifiable */
+}
+
+/* Sets layout and responsive behavior for education and work experience blocks */
+.education, 
+.work-experience {
+  flex: 1 1 40%; /* adjusts size, allows wrap */
+  min-width: 280px; /* Ensures content doesn't get too narrow on smaller screens */
+}
+
+/* Applies padding and text color to the main resume content container */
+.Resume {
+    padding: 50px; /* Adds space inside container */
+    padding-left: 40px; /* Extra padding on the left for alignment */
+    color: white; /* Ensures text is visible on dark background */
+}
+
+
+/* Styles the wrapper that holds internship experience cards */
+.internship-cards {
+  padding: 40px 5%; /* Adds top/bottom and side padding */
+  background-color: #373946; /* Matches site's dark theme */
+}
+
+.internship-cards h3 {
+  text-align: center;
+  margin-bottom: 30px; /* Adds spacing below heading */
+  font-size: 2rem; /* Makes heading stand out */
+  color: white; /* Matches theme */
+}
+
+/* Styles each internship card */
+.card {
+  background-color: #23242c; /* Dark card background */
+  border-left: 5px solid #008fc8fd; /* Accent border on left for visual separation */
+  border-radius: 12px; /* Rounded corners for modern look */
+  padding: 20px; /* Internal spacing */
+  width: 300px; /* Fixed card width */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease; /* Smooth animation on hover */
+}
+
+/* Styles logos or icons inside the cards */
+.org-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain; /* Ensures logos maintain aspect ratio */
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+/* Slight upward shift when hovering over a card for interactivity */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Styles the name/title inside the card */
+.card h4 {
+  margin-top: 0;
+  color: #008fc8fd; /* Accent color for consistency */
+}
+
+/* Styles paragraph text inside the card */
+.card p {
+  font-size: 0.95rem;
+  color: white;
+}
+
+/* Centers the section that includes the embedded PDF viewer */
+.view-pdf-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Styles the iframe that shows the resume PDF */
+.pdf-container iframe {
+  width: 80vw; /* Makes PDF viewer responsive */
+  height: 90vh; /* Tall enough to display full pages */
+  border: 2px solid #008fc8fd; /* Accent border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+
+/*Style for the download button used to download resume or other files */
+.download-button {
+    display: inline-block; /* Allows padding and margins like a block element */
+    padding: 10px 20px; /* Adds internal spacing for better appearance */
+    background-color: #4CAF50; /* Green background for default state */
+    color: white; /* Adds white text coloring */
+    text-decoration: none; /* removes underline */
+    border-radius: 5px; /* rounder edges */
+}
+
+/* Button hover effect */
+.download-button:hover {
+    background-color: #146416; /* changes the color of button and text */
+}
+
+/* ==========================
+   Image and Text Flex Layout
+   ========================== */
+
+/* Image and text flex container */
+.img-text {
+  display:flex;
+  gap: 10px;
+}
+
+/* container sizing */
+.img-box {
+  max-height: 100px;
+  max-width: 100px;
+  padding-right: 10px;
+}
+
+
+
+/* ==========================
+   Skills and Web Skills Section
+   ========================== */
+
+/* Container for each skill item (e.g., skill name and progress bar) */
+.skill {
+  margin-bottom: 25px; /* Space below each skill block */
+  transition: transform 0.3s ease; /* Smooth animation when hovered */
+}
+
+/* Subtle lift effect on hover */
+.skill:hover {
+  transform: translateY(-5px); /* Moves the element upward slightly */
+}
+
+/* background for progress bars */
+.progress-container {
+  background-color: #c24444; /* Red background for visual contrast */
+  border-radius: 25px; /* Fully rounded bar for a modern pill shape */
+  overflow: hidden; /* Ensures child content doesn’t spill out */
+  height: 30px; /* Sets height of progress bars */
+}
+
+/* progress bar design */
+.progress-bar {
+  height: 100%; /* Matches height of the container */
+  width: 0%; /* Starts empty, to be animated later */
+  background-color: #0fd620; /* Green fill color for progress */
+  color: white; /* Text inside bar is white */
+  text-align: right; /* Aligns text to the right side */
+  line-height: 25px; /* Vertically centers text */
+  padding-right: 10px; /* Padding before the edge */
+  border-radius: 25px; /* Ensures ends stay rounded */
+  transition: width 2s ease-out; /* Smooth width animation when triggered */
+}
+
+/* Styling for section headings in skills area */
+.centered-h2-heading {
+    justify-content: center; /* Centers using flexbox if inside a flex container */
+    text-align: center; /* Centers text horizontally */
+    font-size: 2rem; /* Makes heading prominent */
+}
+
+/* ==========================
+   Skill Icon Grid
+   ========================== */
+
+/* Container for a group of skill icons */
+.skills-icons {
+  display: flex; /* Horizontal layout with wrapping */
+  flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
+  justify-content: center; /* Centers icons as a group */
+  gap: 40px; /* Spacing between individual icons */
+}
+
+/* Wrapper for each skill icon and tooltip */
+.icon-container {
+  position: relative; /* Needed for positioning tooltips */
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+}
+
+/* Styles the actual icon image */
+.icon-container img {
+  width: 100%; /* Makes image responsive within container */
+  height: auto; /* Maintains aspect ratio */
+  transition: transform 0.3s ease; /* Adds hover animation for interactivity */
+}
+
+/* Adjusts the size of icons when hovered over */
+.icon-container:hover img {
+  transform: scale(1.1); /* increases the scale of image */
+}
+
+/* ==========================
+   Tooltip Styling for Skills Icons
+   ========================== */
+
+/* Hidden tooltip container - only appears on icon hover */
+.tooltip {
+    visibility: hidden;  /* Initially hidden */
+  background-color: rgba(0, 0, 0, 0.85);     /* Dark background for contrast */
+  color: #fff;   /* White text for readability */
+  text-align: center;     /* Center text inside tooltip */
+  padding: 8px;   /* Space around the text */
+  border-radius: 6px;  /* Rounded corners for aesthetics */
+  position: absolute;  /* Positioned relative to parent */
+  bottom: -45px;   /* Appears below the icon */
+  left: 50%;  /* Center horizontally */
+  transform: translateX(-50%);   /* Adjusts to true horizontal center */
+  white-space: nowrap;    /* Prevents text wrapping */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s; /* Smooth fade-in on hover */
+  font-size: 0.85rem; /* Slightly smaller text */
+  z-index: 10; /* Ensures tooltip appears above other elements */
+}
+
+/* Reveal the tooltip when hovering over the icon container */
+.icon-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1; /* Fully opaque */
+}
+
+
+/* ==========================
+   Projects Section
+   ========================== */
+
+  .project-wrapper {
+    display: flex;  /* Enable flex layout */
+    flex-wrap: wrap; /* Allow wrapping if screen is too small */
+    gap: 40px; /* Space between the two projects */
+    justify-content: center; /* Center content horizontally */
+    align-items: stretch; /* Keep same height */
+    margin: 40px auto;
+    max-width: 1200px; /* Optional: restrict max width */
+  }
+
+  .projects {
+  flex: 1 1 45%;                /* Allow two items side by side with flexibility */
+  min-width: 300px;
+}
+
+/* Styles individual project cards with a gradient background and hover effects */
+  .project-card {
+  background: linear-gradient(to bottom, #2e313a, #1d1f29); /* Dark gradient look */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  overflow: hidden; /* Prevent content overflow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+  color: white;  /* Text color */
+  padding: 20px; /* Space inside card */
+  position: relative; /* For any absolutely positioned child elements */
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+
+/* Center project headings inside each card */
+.project-card h3 {
+  text-align: center;
+}
+
+.projects a {
+  text-align: center;
+  color: #00c896; /* Highlight color */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect for project links */
+.projects a:hover {
+  color: white;
+  transition: color 0.5s ease; /* Smooth transition */
+}
+
+/* Card hover effect - moves up and increases shadow for interactivity */
+.project-card:hover {
+  transform: translateY(-10px); /* Lift the card */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Bigger shadow */
+}
+
+/* Styles for the action button within project cards */
+.project-button {
+  background-color: #0035c8; /* Primary blue */
+  color: white; /* Text color */
+  padding: 10px 15px; /* Button padding */
+  border-radius: 6px; /* Rounded corners */
+  display: inline-block;  /* Align with other inline elements */
+  text-decoration: none; /* Remove underline */
+  margin-top: 10px; /* Space above button */
+}
+
+.project-button:hover {
+  background-color: #00039e;  /* Darker blue */
+}
+
+@media screen and (max-width: 768px) {
+  .project-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .projects {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+
+
+/* ==========================
+   About Page and Contact Form
+   ========================== */
+
+   /* Adds a dark overlay on top of the Responsive-Banner to improve text visibility */
+.Responsive-Banner::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Full-size overlay */
+  background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0)); /* Fades upward */
+  z-index: 1; /* Ensure it stays behind content */
+}
+
+/* Adds a fade overlay at the top of hero banner 2 for aesthetic depth */
+.hero-2Banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 200px; /* Overlay height */
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Fades down */
+  z-index: 1; /* Layering */
+}
+
+/* Container for the animated introductory banner content */
+.faded-banner {
+  position: relative; /* Stacks above the background overlay */
+  z-index: 2; /* Ensures it's on top of the background gradient */
+  padding: 20px; /* Adds inner spacing */
+  max-width: 700px; /* Limits width for readability */
+  animation: fadeInUp 1s ease-in-out; /* Applies entrance animation */
+}
+
+/* Banner heading style */
+.faded-banner h2 {
+  font-size: 3rem; /* Large font for emphasis */
+  margin-bottom: 20px;  /* Adds spacing below the heading */
+}
+
+
+/* Banner paragraph style */
+.faded-banner p {
+  font-size: 1.2rem;   /* Slightly larger text for better readability */
+  line-height: 1.5; /* Improves text spacing */
+}
+
+/* ==========================
+   About Page - Main Content
+   ========================== */
+
+/* Container for about section text */  
+.about-content {
+  position: relative; /* Maintains stacking context */
+  z-index: 2;   /* Keeps it above background overlays */
+  max-width: 700px; /* Matches layout with faded banner */
+  padding: 20px;/* Consistent padding */
+}
+
+/* Main heading inside about section */
+.about-content h2 {
+  font-size: 4rem; /* Extra large for strong visual hierarchy */
+  margin-bottom: 20px; /* Space between heading and paragraph */
+}
+
+/* Paragraphs inside about section */
+.about-content p {
+  font-size: 1.25rem; /* Consistent readable size */
+  line-height: 1.6; /* More relaxed line spacing */
+}
+
+/* ==========================
+   Explore Tab Section
+   ========================== */
+
+/* Container for call-to-action buttons (Explore More, etc.) */   
+.explore-tab {
+  justify-content: center; /* Center items horizontally */
+  align-items: center;  /* Center items vertically */
+  text-align: center; /* Centers text inside buttons */
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+}
+
+/* ==========================
+   Hyperlink Styling
+   ========================== */
+
+
+/* Default link style for paragraph hyperlinks */   
+.hyperlinks-ph a {
+  color: rgb(17, 199, 231);  /* Bright blue to indicate a link */
+  text-decoration: underline;  /* Makes links obvious */
+}
+
+/* Shared hover effect for contact and paragraph links */
+.contact a:hover, .hyperlinks-ph a:hover {
+  color: white;   /* Inverts color for interactivity */
+  background: none; /* Clears any default background styles */
+
+}
