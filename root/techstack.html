@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My TechStack</title>
+    <meta name="description" content="Showcasing Ethan Walsh's web development skills, including JavaScript, HTML5, CSS3, and real-world project examples. Explore my coding expertise and UI/UX abilities.">
+    <meta name="author" content="Ethan Walsh">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="web development, JavaScript, HTML, CSS, coding, skills, Ethan Walsh, front-end, UI/UX, portfolio, projects">
+    <link rel="stylesheet" href="/scripts/CSS/portfolio.css">
+    <link rel="stylesheet" href="/scripts/CSS/Navbar-Header.css">
+    <link rel="stylesheet" href="/scripts/CSS/layout.css">
+</head>
+<body>
+    <div class="header-nav-container">
+        <header>
+            <img class="logo" src="/images/new-logo.png" alt="Logo">
+            <h1>TechStack</h1>
+        </header>
+        <nav>
+                <a href="home.html">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="about.html">About</a>
+                <div class="dropdown">
+                <a href="#" class="dropbtn">Skills ▼</a>
+                <div class="dropdown-content">
+                    <a href="javascriptpage.html">JavaScript Skills</a>
+                    <a href="skill-cybersecurity.html">Cyber Security</a>
+                    <a href="skill-communication.html">Communication</a>
+                    <a href="UI-UXdesign.html">UI/UX Design</a>
+                </div>
+            </div>
+            <a href="form-page.html" target="_blank" class="nav-button">Form-Page</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Header for the skills progression section -->
+        <div class="centered-h2-heading">
+            <h2>Skills Progression</h2>
+        </div>
+
+        <!-- Container for all skill progress bars -->
+        <div class="progress-bar-class">
+
+            <!-- Individual skill progress for HTML -->
+            <div class="skill">
+                <label>HTML</label>
+                <div class="progress-container">
+                    <!-- Progress bar uses data attribute to dynamically set width -->
+                    <div class="progress-bar" data-width="75%">75%</div>
+                </div>
+            </div>
+
+            <!-- Individual skill progress for TypeScript -->
+            <div class="skill">
+                <label>TypeScript</label>
+                <div class="progress-container">
+                    <div class="progress-bar" data-width="50%">50%</div>
+                </div>
+            </div>
+
+            <!-- Individual skill progress for CSS -->
+            <div class="skill">
+                <label>CSS</label>
+                <div class="progress-container">
+                    <div class="progress-bar" data-width="100%">100%</div>
+                </div>
+            </div>
+
+            <!-- Individual skill progress for JavaScript -->
+            <div class="skill">
+                <label>JS</label>
+                <div class="progress-container">
+                    <div class="progress-bar" data-width="50%">50%</div>
+                </div>
+            </div>
+
+            <!-- Individual skill progress for NextJS -->
+            <div class="skill">
+                <label>NextJS</label>
+                <div class="progress-container">
+                    <div class="progress-bar" data-width="40%">40%</div>
+                </div>
+            </div>
+
+            <!-- Individual skill progress for ReactMaps -->
+            <div class="skill">
+                <label>ReactMaps</label>
+                <div class="progress-container">
+                    <div class="progress-bar ReactMaps" data-width="10%">10%</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section header for visual tech stack representation -->
+        <div class="centered-h2-heading">
+            <h2>My TechStack</h2>
+        </div>
+        
+        <!-- Icon-based representation of key technical tools used -->
+        <div class="skills-icons">
+            <!-- Each icon represents a skill with tooltip descriptions -->
+            <div class="icon-container">
+                <img src="/images/html-logo.webp" alt="HTML">
+                <span class="tooltip">HTML: Structure of webpages</span>
+            </div>
+            <div class="icon-container">
+                <img src="/images/css-logo.webp" alt="CSS">
+                <span class="tooltip">CSS: Styling and layout</span>
+            </div>
+            <div class="icon-container">
+                <img src="/images/js-logo.webp" alt="JavaScript">
+                <span class="tooltip">JavaScript: Adds interactivity</span>
+            </div>
+            <div class="icon-container">
+                <img src="/images/react-logo.webp" alt="React">
+                <span class="tooltip">React: Frontend JS framework</span>
+            </div>
+            <div class="icon-container">
+                <img src="/images/node-logo.webp" alt="Node.js">
+                <span class="tooltip">Node.js: Backend JS runtime</span>
+            </div>
+            <div class="icon-container">
+                <img src="/images/github-mark-white.png" alt="Git">
+                <span class="tooltip">Git: Version control system</span>
+            </div>
+        </div>
+
+        <!--Projects container -->
+        <section id="projects">
+            <h2 class="centered-h2-heading">Projects</h2>
+            <!-- Container for individual project cards -->
+            <div class="project-wrapper">
+                <div class="projects">
+                    <div class="project-card">
+                        <h3>Generating Insights with Jarvis Microsoft</h3>
+                        <p>An applied AI project in collaboration with Evolutioned, focused on using Microsofts 
+                            open-source JARVIS framework to generate meaningful insights from real-world project datasets. 
+                            The goal is to build a reusable backend process that applies existing language models to break down project contexts and surface insights in a fraction of the time it would take a human. 
+                            The project emphasizes backend development using Python, 
+                            with no frontend work, and showcases the practical use of commoditised AI to augment decision-making.</p>
+                        <a href="https://github.com/Shasuau/JARVIS-Insights" class="project-button" target="_blank">View Project</a>
+                    </div>
+                </div>
+
+                <div class="projects">
+                    <div class="project-card">
+                        <h3>Development of WheelEasy Blog Platform</h3>
+                        <p>This blog platform is a full-stack web application built with Next.js, Supabase, and PostgreSQL. 
+                            It allows users to view published blog posts with rich content, categories, and author profiles. 
+                            The platform supports dynamic routing, pagination, and secure content fetching via Supabase’s backend-as-a-service. Designed with scalability in mind, it integrates both server-side and client-side rendering and is styled using Vanilla CSS and Material UI to match existing frontend architecture. 
+                            This project demonstrates my ability to adapt to pre-existing stacks while building responsive, data-driven components and maintaining clean, modular code.</p>
+                        <a href="https://wheeleasy.org/blog" class="project-button" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- External JavaScript file for dynamic functionality (e.g. animating progress bars) -->
+    <script src="/scripts/script.js"></script>
+
+
+
+<footer class="footer-class">
+    <!-- Centered Copyright -->
+    <div class="footer-Information">
+        <p>&copy; 2025 Ethan Walsh. All content used with permission.</p>
+    </div>
+
+    <!-- Main Footer Grid -->
+    <div class="footer-content">
+        <!-- Left Side: Contact Info + Socials -->
+        <div class="footer-left">
+            <h3>Contact Information</h3>
+            <p>Phone: <a href="tel:+209202939301">0492929330201</a></p>
+            <p>Email: <a href="mailto:ethan72619@gmail.com">Ethan72619@gmail.com</a></p>
+
+            <h3>Social Media</h3>
+            <div class="soc-links">
+                <a href="https://www.linkedin.com/in/ethan-walsh-7693582b9/">
+                    <img src="/images/linkedin.png" class="social-icon" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="/images/instagram.png" class="social-icon" alt="Instagram">
+                </a>
+                <a href="https://github.com/EthanW3416">
+                    <img src="/images/github-mark-white.png" class="social-icon" alt="GitHub">
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Side: Navigation Links -->
+        <div class="footer-right">
+            <h3>Explore</h3>
+            <ul class="footer-nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="techstack.html">TechStack</a></li>
+                <li><a href="form-page.html" target="_blank">Form Page</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    
+</body>
+</html>
