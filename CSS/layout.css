@@ -64,7 +64,7 @@ body {
   }
 
 .Responsive-Banner, .Responsive-Banner img {
-  background-image: url("../images/mountains.png");
+  background-image: url("./images/mountains.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -77,7 +77,7 @@ body {
 }
 
 .hero-2Banner {
-  background-image: url("../images/hero-2.png");
+  background-image: url("./images/hero-2.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
